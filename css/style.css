@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+img {
+    max-width: 100%;
+}
+
+main {
+    position: relative;
+    padding: 0 0 100px;
+}
+
+.anim {
+    position: absolute;
+    width: 30%;
+}
+.anim:nth-child(odd) {
+    left: 10%;
+}
+.anim:nth-child(even) {
+    right: 10%;
+}
+.anim:nth-child(1) {
+    top: 12%;
+}
+.anim:nth-child(2) {
+    top: 26%;
+}
+.anim:nth-child(3) {
+    top: 40%;
+}
+.anim:nth-child(4) {
+    top: 54%;
+}
+.anim:nth-child(5) {
+    top: 68%;
+}
+.anim:nth-child(6) {
+    top: 82%;
+}
+.anim:nth-child(7) {
+    top: 96%;
+}
+
+.slide_up {
+    transition: 1s ease;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.slide_up.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.slide_down {
+    transition: 1s ease;
+    transform: translateY(-50px);
+    opacity: 0;
+}
+.slide_down.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.slide_left_in {
+    transition: 1s ease;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+.slide_left_in.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.slide_right_in {
+    transition: 1s ease;
+    transform: translateX(30px);
+    opacity: 0;
+}
+.slide_right_in.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.zoom_in {
+    transition: .5s ease;
+    transform: scale(0,0);
+    opacity: 0;
+}
+.zoom_in.active {
+    transform: scale(1,1);
+    opacity: 1;
+}
+.roll_in {
+    transition: .5s ease;
+    transform: scale(0,0) rotateZ(0deg);
+    opacity: 0;
+}
+.roll_in.active {
+    transition: .5s ease;
+    transform: scale(1,1) rotateZ(720deg);
+    opacity: 1;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(-200px);
+    }
+    20% {
+        transform: translateY(20px);
+    }
+    30% {
+        transform: translateY(-15px);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    opacity: 0;
+}
+.bounce.active {
+    opacity: 1;
+    animation: bounce 1s;
+}
+
+.contents p {
+    font-size: 5vw;
+    text-align: center;
+    line-height: 100vh;
+}
+
